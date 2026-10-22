@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7ff">
+  <title>ClassPulse — Live Class Polls</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="{{ url_for('home') }}" aria-label="ClassPulse home">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>ClassPulse</span>
+    </a>
+    <span class="header-note">A little more participation, every class.</span>
+  </header>
+
+  <main class="home-main">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR THE CLASSROOM</span>
+        <h1>Good questions make<br><span>great classes.</span></h1>
+        <p class="hero-description">Bring every voice into the room. Create a quick poll for your class, or join in when your teacher is ready.</p>
+        <div class="home-actions">
+          <a class="button button-primary" href="{{ url_for('teacher_dashboard') }}">
+            Teacher Dashboard <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-secondary" href="{{ url_for('student_page') }}">
+            Student Voting <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <p class="home-footnote"><span aria-hidden="true">✦</span> No sign-up needed to get started</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="poll-card">
+          <div class="poll-card-top"><span class="live-dot"></span> QUICK POLL <span class="poll-menu">•••</span></div>
+          <p class="poll-question">What helps you learn something new?</p>
+          <div class="poll-option option-highlight"><span class="option-icon">💡</span> Seeing an example <span class="option-check">✓</span></div>
+          <div class="poll-option"><span class="option-icon">🗣️</span> Talking it through</div>
+          <div class="poll-option"><span class="option-icon">✍️</span> Trying it myself</div>
+          <div class="poll-avatars"><span>J</span><span>M</span><span>A</span><small>your class is full of ideas</small></div>
+        </div>
+        <span class="sparkle sparkle-one">✳</span>
+        <span class="sparkle sparkle-two">✦</span>
+      </div>
+    </section>
+
+    <section class="home-bottom" aria-label="How ClassPulse works">
+      <div><span class="step-number">01</span><span><strong>Ask anything</strong><small>Set up a question in seconds</small></span></div>
+      <span class="step-divider" aria-hidden="true"></span>
+      <div><span class="step-number">02</span><span><strong>Get everyone involved</strong><small>Make space for every answer</small></span></div>
+      <span class="step-divider" aria-hidden="true"></span>
+      <div><span class="step-number">03</span><span><strong>Learn together</strong><small>Turn ideas into conversations</small></span></div>
+    </section>
+  </main>
+</body>
+</html>
